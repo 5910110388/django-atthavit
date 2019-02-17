@@ -1,0 +1,155 @@
+{% load static %}
+<html>
+    <head>
+        <title>คณะวิศวกรรมศาสตร์ มหาวิทยาลัยสงขลานครินทร์</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Prompt|Sarabun" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <head id="home">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+               <div class="container">
+                 <div class="navbar-header">
+                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                   </button>
+                   
+                    <a class="navbar-brand" href="/" style="color: #fff" target="_blanck">
+                      Faculty of Engineering PSU
+                   </a>     
+                 </div>
+                 <div id="navbar" class="collapse navbar-right navbar-collapse">
+                   <ul class="nav navbar-nav" style="font-family: 'Prompt', sans-serif;">
+                                <li><a href="/" style="color: #fff">หน้าหลัก</a></li>
+                                <li><a href="/admin" style="color: #fff">ผู้ดูแลระบบเข้าสู่ระบบ</a></li>
+                   </ul>
+                 </div> <!-- end navbar-collapse -->
+               </div>
+            </nav> <!-- end navbar -->
+            
+             <!-- end container -->
+          </head>
+        
+            <div class="header">
+            <div class="container text-center vertical-align">
+              <div class="main-info">
+                <h1 class="logo" style="font-family: 'Promt', sans-serif;">Welcome to <strong>Faculty of Engineering PSU</strong></h1>
+                <p style="font-family: 'Prompt', sans-serif; font-size: 2em;">ประโยชน์ของเพื่อนมนุษย์เป็นกิจที่หนึ่ง</p>
+                <div id="arrow">
+                  <a class="learn-more" href="#about" title="Go to About section">
+                    <i class="fa fa-angle-down second-arrow fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-angle-down first-arrow" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            </div>
+        <section id="news">
+            <div class="container">
+              <div class="white-section">
+                <h2 class="section-heading text-center" style="font-family: 'Prompt', sans-serif; font-size: 2em;">ข่าวสารจากคณะ</h2>
+                <hr class="heading-border"/>
+                <div class="user-info">
+                  <div class="content container">
+                    <div class="row">
+                        <div>
+                        {% block content %}
+                        {% endblock %}
+                        </div>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section id="portfolio" style="font-family: 'Prompt', sans-serif;">
+            <div class="container text-center">
+              <div class="portfolio-items">
+                <h2 class="section-heading logo" style="font-family: 'Prompt', sans-serif;">คณะวิศวกรรมศาสตร์</h2> 
+                <div class="row">
+                    <div class="col-sm-4 col-md-4">
+                      <div class="thumbnail">
+                        <img class="img-responsive" src="{% static 'images/2.jpg' %}">
+                        <div class="caption">
+                          <p>คณะวิศวกรรมศาสตร์</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-sm-4 col-md-4">
+                      <div class="thumbnail">
+                        <img class="img-responsive" src="{% static 'images/1.jpg' %}">
+                        <div class="caption">
+                          <p>ภาควิชาวิศวกรรมคอมพิวเตอร์</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-sm-4 col-md-4">
+                      <div class="thumbnail">
+                        <img class="img-responsive" src="{% static 'images/3.jpg' %}">
+                        <div class="caption">
+                          <p>ห้องปฏิบัติการกลาง</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>  
+        
+                  <div class="row">
+                    <div class="col-sm-4 col-md-4">
+                      <div class="thumbnail">
+                        <img class="img-responsive" src="{% static 'images/4.jpg' %}">
+                        <div class="caption">
+                          <p>ตึกหุ่นยนต์</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-sm-4 col-md-4">
+                      <div class="thumbnail">
+                        <img class="img-responsive" src="{% static 'images/5.jpg' %}">
+                        <div class="caption">
+                          <p>อาคารวิจัยวิศวกรรมประยุกต์สิรินธร</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-sm-4 col-md-4">
+                      <div class="thumbnail">
+                        <img class="img-responsive" src="{% static 'images/6.jpg' %}">
+                        <div class="caption">
+                          <p>ภายในคณะวิศวกรรมศาสตร์</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </section>
+          
+            <footer id="footer">
+            <div class="text-right">
+              <button class="btn btt" id="btt"><a href="#home" style="font-family: 'Prompt', sans-serif;">ขึ้นด้านบน</a></button>
+               <br />
+            </div>
+            <div class="container-fluid text-center">
+              <h4 style="font-family: 'Prompt', sans-serif;">&copy; Copyrights 2019</h4>
+              <span>
+                <p> Django Software Lab</p>
+              </span> 
+            </div>
+          </footer>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+            <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+            <script src="https://dl.boonnithi.com/res2/js/index.js"></script>
+            <script src="https://dl.boonnithi.com/res2/member/js/index.js"></script> 
+        </body>
+</html>
